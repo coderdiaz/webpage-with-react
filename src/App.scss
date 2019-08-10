@@ -1,0 +1,58 @@
+$white: #fff;
+$black: #000;
+$yellow: #ffd692;
+
+body {
+    margin: 0;
+    padding: 0;
+    outline: 0 none;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto; // hack-css
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 15px; // css-grid gap
+}
+
+.header {
+    background: $black;
+    min-height: 50px;
+    padding: 10px 0;
+    color: $white;
+
+    .container {
+        grid-template-columns: repeat(2, 1fr); // CSS Grid
+        grid-template-rows: 50px;
+    }
+}
+
+.main {
+    min-height: 500px;
+}
+
+.footer {
+    min-height: 120px;
+    background-color: $yellow;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    padding: 5px;
+    justify-content: flex-end;
+    position: relative;
+    top: -5px;
+
+    .nav-item {
+        padding: 0 5px;
+        a {
+            color: $white;
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    }
+}
