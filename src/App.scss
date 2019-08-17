@@ -1,11 +1,13 @@
 $white: #fff;
 $black: #000;
 $yellow: #ffd692;
+$font-roboto: "Roboto", "Arial", sans-serif;
 
 body {
     margin: 0;
     padding: 0;
     outline: 0 none;
+    font-family: $font-roboto;
 }
 
 .container {
@@ -55,4 +57,70 @@ body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
     }
+}
+
+.main {
+    .hero {
+        background-image: url("https://images.unsplash.com/photo-1523726491678-bf852e717f6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+        background-size: cover;
+        background-position: center;
+        padding: 100px 0;
+
+        .hero-title {
+            font-size: 36px;
+            color: $white;
+            font-weight: bold;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            color: $white;
+            font-weight: 300;
+            margin: 0;
+        }
+    }
+    .content {
+        padding: 30px 0;
+
+        .container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+.card {
+    background-size: cover;
+    background-position: center;
+    min-height: 200px;
+    color: $white;
+    position: relative;
+    .card-content {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 15px;
+        .card-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0;
+        }
+        .card-author {
+            font-size: 12px;
+            font-weight: 400;
+            margin: 0;
+        }
+    }
+}
+
+.btn-showmore {
+    margin-top: 15px;
+    padding: 10px;
+    border: 2px solid darken($yellow, 10%);
+    width: 130px;
+    color: $black;
+    font-weight: 700;
+    border-radius: 4px;
+    background: $yellow;
 }
