@@ -12,6 +12,9 @@ const Navigation = () => <header className="header">
       <li className="nav-item"><Link to="/">Home</Link></li>
       <li className="nav-item"><Link to="/about">About</Link></li>
       <li className="nav-item"><Link to="/contact">Contact</Link></li>
+      <li className="nav-item nav-menu">
+        <img width="20" src="https://cdn3.iconfinder.com/data/icons/food-set-3/91/Food_C206-512.png" alt="sadasd" />
+      </li>
     </ul>
   </div>
 </div>

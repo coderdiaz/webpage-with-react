@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-    width: 960px;
+    width: 100%;
     margin: 0 auto; // hack-css
 }
 
@@ -123,4 +123,67 @@ body {
     font-weight: 700;
     border-radius: 4px;
     background: $yellow;
+}
+
+.nav-menu {
+    display: none !important;
+}
+
+.nav-item {
+    display: block;
+}
+
+@media (max-width: 576px) {
+    .nav-menu {
+        display: block !important;
+    }
+
+    .hero {
+        padding: 15px !important;
+    }
+
+    .content {
+        .grid-container {
+            grid-template-columns: 1fr !important;
+        }
+    }
+
+    .nav-item {
+        display: none;
+    }
+}
+
+@media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+}
+  
+@media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+
+    .content {
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr) !important;
+        }
+    }
+}
+  
+@media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+    .content {
+        .grid-container {
+            grid-template-columns: repeat(3, 1fr) !important;
+        }
+    }
+}
+  
+@media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
 }
