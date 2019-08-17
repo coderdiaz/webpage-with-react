@@ -118,7 +118,7 @@ const Home = () => (
     <>
         <section className="hero">
           <div className="container">
-            <h1 className="hero-title">Hello to my webpage</h1>
+            <h1 className="hero-title">Bedu</h1>
             <h2 className="hero-subtitle">The internet’s source of freely useable images.</h2>
           </div>
         </section>
