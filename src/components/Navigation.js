@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Logotype from '../assets/logotype.png';
 
 const Navigation = () => <header className="header">
@@ -8,9 +9,9 @@ const Navigation = () => <header className="header">
   </div>
   <div className="navbar">
     <ul className="nav">
-      <li className="nav-item"><a href="#">Home</a></li>
-      <li className="nav-item"><a href="#">About</a></li>
-      <li className="nav-item"><a href="#">Contact</a></li>
+      <li className="nav-item"><Link to="/">Home</Link></li>
+      <li className="nav-item"><Link to="/about">About</Link></li>
+      <li className="nav-item"><Link to="/contact">Contact</Link></li>
     </ul>
   </div>
 </div>
