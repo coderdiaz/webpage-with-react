@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
-import Logotype from './assets/logotype.png';
+import Navigation from './components/Navigation';
+import Card from './components/Card';
 
 // API
 const cardElements = [
@@ -117,20 +118,7 @@ const cardElements = [
 function App() {
   return (
     <>
-      <header className="header">
-        <div className="container grid-container">
-          <div className="logo-wrapper">
-            <img src={Logotype} width="50" alt="" />
-          </div>
-          <div className="navbar">
-            <ul className="nav">
-              <li className="nav-item"><a href="#">Home</a></li>
-              <li className="nav-item"><a href="#">About</a></li>
-              <li className="nav-item"><a href="#">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </header>
+      <Navigation />
       <main className="main">
         <section className="hero">
           <div className="container">
@@ -141,17 +129,7 @@ function App() {
         <section className="content">
           <div className="container grid-container">
             {cardElements.map((card, index) =>
-              <div
-                key={index}
-                className="card"
-                style={{
-                  backgroundImage: `url(${card.cover})`,
-                }}>
-                <div className="card-content">
-                  <h3 className="card-title">{card.title}</h3>
-                  <h4 className="card-author">{card.author}</h4>
-                </div>
-              </div>)}
+              <Card key={index} card={card} />)}
           </div>
           <div className="container">
             <button className="btn-showmore">Show more</button>
